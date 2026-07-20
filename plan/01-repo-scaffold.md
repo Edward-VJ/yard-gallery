@@ -1,7 +1,7 @@
 ﻿# YG-1: Set up GitHub repo + Next.js static scaffold + CI
 
 ## Goal
-A public GitHub repo `yard-gallery` containing a Next.js static-export skeleton that builds cleanly in CI.
+A private GitHub repo `yard-gallery` containing a Next.js static-export skeleton that builds cleanly in CI.
 
 ## Pinned versions (verified current 2026-07-20 — do not re-check or substitute)
 Next.js 16.2.x · React (whatever create-next-app 16.2.x pairs it with) · Tailwind CSS 4.3.x (CSS-first `@theme` config) · next-intl 4.13.x · sharp 0.35.x (added in YG-5) · Playwright 1.61.x (added in YG-8) · Node.js 24 LTS (Active LTS, chosen over Node 22's Maintenance LTS for longer runway).
@@ -23,8 +23,8 @@ Physical, laser-cut, un-reprintable QR codes already encode exact Lithuanian URL
 7. Install `next-intl` (v4.13.x, whatever `npm install next-intl` resolves to at pin time). Config: `localeDetection: false`, no `pathnames`.  Wire minimal `messages/lt.json` and `messages/en.json` with one key to prove the pipeline end-to-end.
 8. Placeholder homepage content: "Kiemo Galerija — rebuild in progress."
 9. **Mandatory smoke test before continuing to any other ticket**: `npm run build`, serve `out/` locally, and confirm: `/` and `/index.html` serve the Lithuanian placeholder with NO locale prefix; `/en/` serves the English placeholder; there is no `/lt/` path at all (lt lives only at bare paths). This proves the split-tree architecture actually works under static export before any content-heavy ticket (YG-2 onward) builds on top of it. If it doesn't work as expected, stop and resolve it here — do not proceed with a workaround further down the pipeline.
-10. Create the GitHub repo with `gh repo create yard-gallery --public --source . --push` (confirm the account first with `gh auth status`).
-11. Add GitHub Actions workflow `.github/workflows/ci.yml`: `actions/setup-node@v4` with `node-version: 24` (do not rely on the runner default), then `npm ci`, `npm run lint`, `npm run build` in `site/`. CI must pass before any ticket is closed. (Public repo → GitHub Actions minutes are free/unlimited on standard runners — no budget concern for a thorough CI suite.)
+10. Create the GitHub repo with `gh repo create yard-gallery --private --source . --push` (confirm the account first with `gh auth status`).
+11. Add GitHub Actions workflow `.github/workflows/ci.yml`: `actions/setup-node@v4` with `node-version: 24` (do not rely on the runner default), then `npm ci`, `npm run lint`, `npm run build` in `site/`. CI must pass before any ticket is closed. (Private repo → GitHub Actions free tier is 2,000 minutes/month on the free personal plan, not unlimited like public repos — ample for this project's CI, but keep an eye on total suite runtime as YG-8's test matrix grows; sharding trims wall-clock, not minutes consumed.)
 12. Write repo `README.md`: what the project is, dev commands, pinned versions, deploy target (Cloudflare Pages, static export, framework preset "Next.js (Static HTML Export)"), and a pointer to `plan/qr-locked-urls.md` as required reading before touching routing.
 13. Write `CLAUDE.md` at repo root: stack decisions and pinned versions above, locale list, the split-routing-tree rule, "content lives in /content and /messages", "never commit API keys, /raw, or /processed".
 

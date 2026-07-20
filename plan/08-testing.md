@@ -1,7 +1,7 @@
 ﻿# YG-8: Formal testing — Playwright e2e, i18n, Lighthouse, accessibility
 
 ## Goal
-The formal test suite the old site never had — deliberately exhaustive, not a token smoke test. Runs in CI on every push; deploy (YG-9) is blocked on green. Target: **150+ discrete assertions** across the suite (tracked via Playwright's test count in CI output — if the suite is thinner than that, it isn't done). Since this is a public GitHub repo, CI minutes are free/unlimited, so thoroughness costs nothing but wall-clock; use `--shard` across parallel jobs if the suite exceeds ~10 minutes.
+The formal test suite the old site never had — deliberately exhaustive, not a token smoke test. Runs in CI on every push; deploy (YG-9) is blocked on green. Target: **150+ discrete assertions** across the suite (tracked via Playwright's test count in CI output — if the suite is thinner than that, it isn't done). This is a private repo, so GitHub Actions minutes are capped at 2,000/month free (not unlimited like a public repo) — still ample for a suite this size, but be deliberate: use `--shard` across parallel jobs to cut wall-clock, and avoid re-running the full matrix (all 13 locales × 3 browser engines) on every trivial push if it starts eating meaningfully into the monthly budget — chromium-only + a locale subset on every push, full matrix on merge to main, is a reasonable fallback if minutes ever get tight.
 
 ## Pinned tooling (verified current 2026-07-20)
 - **Playwright 1.61.x** (Apache-2.0, free). Install browsers in CI via `npx playwright install --with-deps` on `ubuntu-latest` pinned to **Node 24** (`actions/setup-node@v4`, `node-version: 24` — do not rely on the runner default).
