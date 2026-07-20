@@ -1,0 +1,9 @@
+{
+  "name": "yard-gallery-scripts",
+  "private": true,
+  "type": "module",
+  "description": "Dev-only tooling (scraping, upscaling, image builds) — not part of the deployed site.",
+  "dependencies": {
+    "cheerio": "^1"
+  }
+}
