@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Upscale pilot — model comparison</title>
+<style>
+  :root { color-scheme: dark; }
+  body { font-family: system-ui, sans-serif; background: #14161a; color: #e8e8e8; margin: 0; padding: 24px 32px 80px; }
+  h1 { font-size: 1.3rem; font-weight: 600; margin-bottom: 4px; }
+  .sub { color: #9aa0a6; margin-bottom: 32px; font-size: 0.9rem; }
+  .row { margin-bottom: 56px; border-top: 1px solid #2a2d33; padding-top: 20px; }
+  .row h2 { font-size: 1rem; font-weight: 600; margin: 0 0 12px; color: #f0f0f0; }
+  .row h2 .meta { color: #9aa0a6; font-weight: 400; font-size: 0.85rem; }
+  .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .col { background: #1c1f24; border-radius: 8px; overflow: hidden; border: 1px solid #2a2d33; }
+  .col .label { padding: 8px 12px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.02em; text-transform: uppercase; color: #9aa0a6; border-bottom: 1px solid #2a2d33; display: flex; justify-content: space-between; }
+  .col a { display: block; }
+  .col img { display: block; width: 100%; height: 320px; object-fit: contain; background: #0c0d0f; cursor: zoom-in; }
+  .col .dims { padding: 6px 12px; font-size: 0.75rem; color: #6b7078; }
+  .instructions { background: #1c1f24; border: 1px solid #2a2d33; border-radius: 8px; padding: 16px 20px; margin-bottom: 32px; font-size: 0.9rem; line-height: 1.5; }
+  .instructions code { background: #0c0d0f; padding: 1px 5px; border-radius: 3px; }
+</style>
+</head>
+<body>
+  <h1>Upscale pilot — realesrgan-ncnn-vulkan via Upscayl</h1>
+  <div class="sub">6 diverse images × 2 candidate models. Click any image to open it full-resolution in a new tab.</div>
+  <div class="instructions">
+    Pick whichever model looks better overall (sharper detail without inventing/smearing new detail that changes the artwork).
+    It's fine to prefer different models for different image types — say so if that's the case. The two candidates:
+    <code>high-fidelity-4x</code> (Upscayl's general-purpose photo model) and <code>ultrasharp-4x</code> (the 4x-UltraSharp community model named in the plan).
+  </div>
+
+  <div id="rows"></div>
+
+  <script>
+    const items = [
+      { name: "black-house-3.jpg", label: "Dark mural — Juodasis namas (Black House)", original: "../raw/images/black-house-3.jpg" },
+      { name: "white-house-2-2.jpg", label: "Bright mural — Baltasis namas (White House)", original: "../raw/images/white-house-2-2.jpg" },
+      { name: "mrs-kazimiera-portrait-2.jpg", label: "Portrait — Kaimynės ponios Kazimieros portretas", original: "../raw/images/mrs-kazimiera-portrait-2.jpg" },
+      { name: "mirror-flowers-7.jpg", label: "Wide shot — Mirror Flowers (panorama aspect)", original: "../raw/images/mirror-flowers-7.jpg" },
+      { name: "090.png", label: "Book page — Sunkūs Paminklai, page 90 of 183", original: "../raw/book/090.png" },
+      { name: "mirror-flowers-15-1.jpg", label: "Smallest/worst original — Mirror Flowers detail (295×226)", original: "../raw/images/mirror-flowers-15-1.jpg" },
+    ];
+
+    const models = [
+      { key: "high-fidelity-4x", dir: "../processed/pilot/high-fidelity-4x" },
+      { key: "ultrasharp-4x", dir: "../processed/pilot/ultrasharp-4x" },
+    ];
+
+    const root = document.getElementById("rows");
+    for (const item of items) {
+      const row = document.createElement("div");
+      row.className = "row";
+      const h2 = document.createElement("h2");
+      h2.innerHTML = `${item.label} <span class="meta">(${item.name})</span>`;
+      row.appendChild(h2);
+
+      const cols = document.createElement("div");
+      cols.className = "cols";
+
+      const originalCol = makeCol("Original", item.original);
+      cols.appendChild(originalCol);
+      for (const model of models) {
+        cols.appendChild(makeCol(model.key, `${model.dir}/${item.name}`));
+      }
+      row.appendChild(cols);
+      root.appendChild(row);
+    }
+
+    function makeCol(label, src) {
+      const col = document.createElement("div");
+      col.className = "col";
+      const labelEl = document.createElement("div");
+      labelEl.className = "label";
+      labelEl.innerHTML = `<span>${label}</span><span class="dims"></span>`;
+      const link = document.createElement("a");
+      link.href = src;
+      link.target = "_blank";
+      const img = document.createElement("img");
+      img.src = src;
+      img.loading = "lazy";
+      img.addEventListener("load", () => {
+        labelEl.querySelector(".dims").textContent = `${img.naturalWidth}×${img.naturalHeight}`;
+      });
+      link.appendChild(img);
+      col.appendChild(labelEl);
+      col.appendChild(link);
+      return col;
+    }
+  </script>
+</body>
+</html>
