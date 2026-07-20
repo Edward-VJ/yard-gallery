@@ -2,6 +2,24 @@
 
 Rebuild of [yard.gallery](https://yard.gallery) (Kiemo Galerija — an open-air street-art gallery in a historic courtyard in Kaunas, Lithuania) as a free, static, multilingual site, replacing the current WordPress install.
 
+## Stack
+
+Next.js 16.2 (App Router, `output: 'export'`, static) · Tailwind CSS 4 (CSS-first `@theme` config) · next-intl 4.13 · Node.js 24. See `CLAUDE.md` for the full rundown of pinned versions and architectural decisions.
+
+## Dev commands
+
+All commands run from `site/`:
+
+```
+npm run dev      # local dev server
+npm run build    # static export to site/out/
+npm run lint     # eslint
+```
+
+## Deploy target
+
+Cloudflare Pages, free tier. Framework preset **"Next.js (Static HTML Export)"**, build command `npx next build` (run from `site/`), output directory `site/out`.
+
 ## Project tracking
 
 Detailed planning/tickets live in a separate private companion repo, `yard-gallery-plan` — not here. This repo only holds what the build and test suite actually need at runtime:
@@ -12,4 +30,4 @@ Detailed planning/tickets live in a separate private companion repo, `yard-galle
 
 ## Status
 
-Planning complete as of 2026-07-20; scaffold not yet executed.
+Scaffold (Next.js + split routing tree + CI) done as of 2026-07-20. Next up: scraping the live site.
