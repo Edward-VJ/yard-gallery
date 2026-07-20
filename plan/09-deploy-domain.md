@@ -1,0 +1,30 @@
+﻿# YG-9: Deploy to Cloudflare Pages + migrate yard.gallery domain
+
+## Goal
+Site live on Cloudflare Pages (free), `yard.gallery` pointing at it, every QR-locked URL resolving at its exact original address (not a redirect — see constraint below), any genuinely-retired content redirecting sensibly, WordPress safely decommissioned. Several steps here need the human (registrar login, DNS, payments) — Claude prepares everything and hands over exact instructions.
+
+## HARD CONSTRAINT — read `plan/qr-locked-urls.md` first
+Every path in that file is preserved EXACTLY on the new site (see YG-1's split-tree architecture) — it is NOT a redirect target, because the URL never changes at all. This actually shrinks the redirect job: `_redirects` in this ticket is only for content that's genuinely being restructured or retired (if any turns up during YG-2), not for the ~35 QR-locked/should-preserve pages. This also means the Cloudflare `_redirects`-rules-past-#100 quirk flagged below is irrelevant to every QR-critical path specifically, since none of them go through `_redirects` at all.
+
+## Fixed decisions (verified 2026-07-20 — no re-litigating at execution time)
+- **DNS-only move, no registrar transfer.** Cloudflare Registrar is at-cost (no markup) but still a paid annual renewal like any registrar (~$22/yr for `.gallery`, registry Identity Digital) — transferring saves nothing meaningful and adds complexity/lock-in risk. Default: keep registration at WordPress.com, only repoint nameservers to Cloudflare. Do not revisit this decision mid-execution; only reconsider if the human raises it.
+- Cloudflare Pages free-tier limits that constrain this deploy: 500 builds/month, 1 concurrent build, 20-minute build timeout, **20,000 files per deployment**, 25MiB max file size, unlimited bandwidth/requests, up to 100 custom domains — all free. `_redirects` supports up to 2,000 static + 100 dynamic rules (2,100 total); `_headers` up to 100 rules. A community-reported bug has redirect rules silently dropping past #100 in some setups despite the documented higher limit — verify this explicitly post-deploy (see Verify step).
+- Cloudflare Email Routing (free): up to 200 routing addresses, 200 destination addresses, one catch-all rule. Requires DNS already on Cloudflare.
+
+## Steps
+1. **Find out where the domain actually lives** (human): log into WordPress.com → Domains. Note registrar (WordPress.com is the registrar if bought there), expiry date, and whether it's within 60 days of registration/transfer (ICANN 60-day lock — this only blocks a registrar *transfer*, not a nameserver change, so it doesn't block anything in this plan since we're not transferring).
+2. Claude: create the Cloudflare Pages project connected to the GitHub repo — framework preset **"Next.js (Static HTML Export)"**, build command `npx next build` in `site/`, output directory `site/out`. Verify the `*.pages.dev` preview works in all 13 locales. Before this step, confirm the total exported file count is comfortably under 20,000 (checked automatically in YG-5's image pipeline script).
+3. Redirects: `site/public/_redirects` handles ONLY genuinely-retired/restructured URLs (whatever YG-2 flagged as no longer needed) — anything in `plan/qr-locked-urls.md` needs NO entry here since those paths exist directly on the new site at the identical address (see the HARD CONSTRAINT above). Non-lt locale entry points (`/en/`, `/ru/`, etc.) are served directly by the `[locale]` tree from YG-1, not via redirect. If the retired-URL set turns out to be empty, this file may end up nearly empty — that's correct, not a sign something was missed.
+4. Human, guided by a checklist Claude writes (`plan/dns-cutover.md`): add the site to Cloudflare (free plan), set the two assigned nameservers at WordPress.com (Upgrades → Domains → domain → Name Servers → disable "Use WordPress.com name servers" → enter Cloudflare's two — no fee is documented for this in WordPress.com's own docs, but have the human do a 30-second check of their specific plan's domain settings for anything unusual before switching), add the Pages custom domain `yard.gallery` (+ `www` redirect). Allow up to 72 hours for propagation. TLS is automatic.
+5. Verify post-cutover: `dig yard.gallery`, HTTPS OK, all 13 locales load, **every single path in `plan/qr-locked-urls.md` resolves directly (200) at its exact original address on the live domain** (the real-world equivalent of `qr-locked-urls.spec.ts` from YG-8, run again here against production, not just the build), any genuinely-retired URLs 301 correctly including rules past #100, sitemap reachable; submit the new sitemap in Google Search Console (human authorizes the property).
+6. Email: kiemogalerija@gmail.com is Gmail — no MX migration needed unless WordPress.com email forwarding was in use; check and replicate any forwarding rules via Cloudflare Email Routing (free, available once DNS is on Cloudflare).
+7. **Decommission WordPress** (human, only after 2+ weeks of stable operation): downgrade/cancel the WordPress.com plan — but NEVER delete the site content until the `raw/` archive backup (YG-2) is confirmed safe in two places. Keep the domain registration paid wherever it lives (WordPress.com, per the fixed decision above).
+8. Post-launch monitoring: UptimeRobot free monitor on bare `/` (not `/lt/` — Lithuanian is unprefixed per the split-tree architecture) (human creates account or Claude uses an existing one if provided).
+
+## Acceptance criteria
+- https://yard.gallery serves the new site with valid TLS; `*.pages.dev` also works.
+- Every path in `plan/qr-locked-urls.md` resolves DIRECTLY (200, not via a 301) at its exact original path on the live domain — verified post-cutover against production, not just in the build.
+- Any genuinely-retired URL (not in `plan/qr-locked-urls.md`) 301s to a sensible new page, including rules past position #100.
+- Total deployed file count stayed under the 20,000 free-tier cap.
+- Search Console sees the sitemap; no coverage errors after a week.
+- WordPress plan cancelled only after archive verified + site stable.
