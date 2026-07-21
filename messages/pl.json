@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Strona główna",
+    "history": "Historia",
+    "gallery": "Wirtualna galeria",
+    "visiting": "Godziny zwiedzania i zasady",
+    "book": "Sunkūs Paminklai",
+    "support": "Wesprzyj"
+  },
+  "home": {
+    "title": "Kiemo Galerija",
+    "intro": "„Kiemo Galerija” (Galeria na Podwórku) to plenerowa galeria sztuki ulicznej, mieszcząca się na zabytkowym podwórku w Kaunas, na Litwie. Ponad dekadę temu założył ją artysta Vytenis Jakas, który postawił sobie za cel połączyć sąsiadów i uczcić poprzez sztukę pamięć dawnych żydowskich mieszkańców tego miejsca. Galeria zamienia ściany podwórka w płótna, na których prezentowane są murale i instalacje, łącząc historię, wspólnotę i kreatywność.\n\nKażde dzieło sztuki opowiada jakąś historię — od portretów dawnych mieszkańców po symboliczne prace odzwierciedlające wspólne dziedzictwo tego miejsca. W tej cyfrowej przestrzeni można poznać części galerii i jej historię. Galeria zaprasza wszystkich do odkrywania swojej wciąż zmieniającej się opowieści.\n\nAby pomóc utrzymać tę wyjątkową przestrzeń przy życiu i w rozwoju, prosimy rozważyć wsparcie finansowe, dzięki któremu może powstawać sztuka łącząca przeszłość z teraźniejszością."
+  },
+  "history": {
+    "title": "Historia",
+    "intro": "Na tej stronie znajdziecie dwie książki, które opowiadają historię Kiemo Galerija — jej projekty, dzieła sztuki i ludzi, sąsiadów, dzięki którym ten projekt był możliwy.\n\nKsiążka 1 – Początek\n\nKsiążka 2 – Scenografia podwórka i „Pokoje Tajemnic”",
+    "galleries": [
+      {
+        "title": "Książka 1 – Początek",
+        "imagePrefix": "2f2a7638ee3ad0f7de567f76ba679b67-",
+        "imageCount": 74
+      },
+      {
+        "title": "Książka 2 – Scenografia podwórka i „Pokoje Tajemnic”",
+        "imagePrefix": "kiemo-scenografijos-ir-paslapciu-kambariai-2024-07-13-interneto-svetainei-ii-dalis-",
+        "imageCount": 94
+      }
+    ]
+  },
+  "visiting": {
+    "title": "Godziny Zwiedzania i Zasady",
+    "body": ",,Kiemo Galerija” – to prywatna przestrzeń!\n\nW trzydziestu sześciu mieszkaniach naszego podwórka mieszkają ludzie w różnym wieku, którzy pragną w swoich domach spokoju i ciszy!\n\nProsimy odwiedzających o poszanowanie prywatności i spokoju mieszkańców podwórka!\n\nZasady zwiedzania ,,Kiemo Galerija”\n\nKiemo Galerija jest otwarta dla zwiedzających codziennie od 9:00 do 19:00.\n\nProsimy zwiedzających, by nie hałasowali, mówili cicho i powściągliwie wyrażali emocje (głośne komentarze, śmiech, okrzyki itp. zakłócają spokój sąsiadów).\n\nProsimy nie wchodzić na klatki schodowe ani do mieszkań mieszkańców podwórka — to prywatna przestrzeń sąsiadów!\n\nNa podwórku nie wolno śmiecić!\n\nWykorzystanie przestrzeni Kiemo Galerija do różnego rodzaju gier, quizów, zawodów typu orienteering, ślubów i innych zorganizowanych aktywności grupowych musi być wcześniej uzgodnione z kuratorem Kiemo Galerija, Vytenisem Jakasem (e-mail: jakuvy@gmail.com lub yardgallerylt@gmail.com).\n\nŻyczymy pięknych wrażeń i dobrego nastroju!"
+  },
+  "gallery": {
+    "title": "Kiemo Galerija: Wirtualna Galeria",
+    "intro": "Witamy w wirtualnej galerii Kiemo Galerija. Znajdziecie tu zdjęcia wszystkich dzieł sztuki znajdujących się na podwórku, a także kilka fotografii z procesu twórczego i samych artystów. Spróbujcie kliknąć na dzieła sztuki, aby dowiedzieć się o nich więcej!"
+  },
+  "support": {
+    "title": "Wesprzyj Kiemo Galerija",
+    "body": "Kiemo Galerija to inicjatywa społeczności, wspierana przez wolontariuszy i darczyńców. Wasze wsparcie pomaga dbać o dzieła sztuki i przestrzeń podwórka."
+  },
+  "footer": {
+    "contactEmail": "kiemogalerija@gmail.com",
+    "donate": "Wesprzyj"
+  }
+}

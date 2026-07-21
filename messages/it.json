@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Home",
+    "history": "Storia",
+    "gallery": "Galleria Virtuale",
+    "visiting": "Orario di Visita e Regole",
+    "book": "Sunkūs Paminklai",
+    "support": "Dona"
+  },
+  "home": {
+    "title": "Kiemo Galerija",
+    "intro": "La Kiemo Galerija (“Galleria del Cortile”) è una galleria d’arte urbana all’aperto, situata in uno storico cortile di Kaunas, in Lituania. È stata fondata più di un decennio fa dall’artista Vytenis Jakas, con l’obiettivo di unire i vicini e onorare, attraverso l’arte, la vita dei precedenti abitanti ebrei di questo luogo. La galleria trasforma le pareti del cortile in tele, sulle quali sono esposti affreschi e installazioni, unendo storia, comunità e creatività.\n\nOgni opera racconta una storia — dai ritratti dei precedenti abitanti alle opere simboliche che riflettono il patrimonio condiviso di questo luogo. In questo spazio digitale potete esplorare le diverse parti della galleria e la sua storia. La galleria invita tutti a scoprire il suo racconto in continua evoluzione.\n\nPer contribuire a mantenere questo spazio unico vivo e in crescita, vi invitiamo a considerare una donazione, per continuare a creare arte che unisce il passato al presente."
+  },
+  "history": {
+    "title": "Storia",
+    "intro": "In questa pagina troverete due libri che raccontano la storia della Kiemo Galerija, compresi i suoi progetti, le opere d’arte e le persone — i vicini che hanno reso possibile questo progetto.\n\nLibro 1 – Gli Inizi\n\nLibro 2 – La Scenografia del Cortile e “Le Stanze dei Segreti”",
+    "galleries": [
+      {
+        "title": "Libro 1 – Gli Inizi",
+        "imagePrefix": "2f2a7638ee3ad0f7de567f76ba679b67-",
+        "imageCount": 74
+      },
+      {
+        "title": "Libro 2 – La Scenografia del Cortile e “Le Stanze dei Segreti”",
+        "imagePrefix": "kiemo-scenografijos-ir-paslapciu-kambariai-2024-07-13-interneto-svetainei-ii-dalis-",
+        "imageCount": 94
+      }
+    ]
+  },
+  "visiting": {
+    "title": "Orario di Visita e Regole",
+    "body": "La Kiemo Galerija è uno spazio privato!\n\nNei trentasei appartamenti del nostro cortile vivono persone di ogni età, che desiderano pace e tranquillità nella propria casa!\n\nChiediamo ai visitatori di rispettare la privacy e la tranquillità degli abitanti del cortile!\n\nRegole di visita della Kiemo Galerija\n\nLa Kiemo Galerija è aperta ai visitatori tutti i giorni dalle 9.00 alle 19.00.\n\nChiediamo ai visitatori di non fare rumore, di parlare a voce bassa e di esprimere le proprie emozioni con misura (commenti ad alta voce, risate, grida e simili disturbano la tranquillità dei vicini).\n\nVi preghiamo di non entrare nei vani scala e negli appartamenti degli abitanti del cortile: sono spazi privati dei vicini!\n\nÈ vietato gettare rifiuti nel cortile!\n\nL’uso degli spazi della Kiemo Galerija per giochi, quiz, gare di orientamento, matrimoni e altre attività di gruppo organizzate deve essere concordato con il curatore della Kiemo Galerija, Vytenis Jakas (e-mail: jakuvy@gmail.com oppure yardgallerylt@gmail.com).\n\nVi auguriamo una bella visita e una piacevole permanenza!"
+  },
+  "gallery": {
+    "title": "Kiemo Galerija: Galleria Virtuale",
+    "intro": "Benvenuti nella galleria virtuale della Kiemo Galerija. Qui potete trovare le fotografie di tutte le opere d’arte presenti nel cortile, oltre ad alcune immagini del processo creativo e degli artisti. Provate a cliccare sulle opere per scoprire di più su di esse!"
+  },
+  "support": {
+    "title": "Sostieni la Kiemo Galerija",
+    "body": "La Kiemo Galerija è un’iniziativa di comunità, sostenuta da volontari e donatori. Il vostro contributo aiuta a prendersi cura delle opere d’arte e dello spazio del cortile."
+  },
+  "footer": {
+    "contactEmail": "kiemogalerija@gmail.com",
+    "donate": "Dona"
+  }
+}

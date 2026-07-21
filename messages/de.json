@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "history": "Geschichte",
+    "gallery": "Virtuelle Galerie",
+    "visiting": "Öffnungszeiten und Regeln",
+    "book": "Sunkūs Paminklai",
+    "support": "Spenden"
+  },
+  "home": {
+    "title": "Kiemo Galerija",
+    "intro": "Kiemo Galerija (Hofgalerie / Yard Gallery) ist eine Open-Air-Straßenkunstgalerie in einem historischen Hof in Kaunas, Litauen. Sie wurde vor mehr als einem Jahrzehnt von dem Künstler Vytenis Jakas gegründet, der damit die Nachbarn zusammenbringen und das Leben der früheren jüdischen Bewohner dieses Ortes durch Kunst würdigen wollte. Die Galerie verwandelt die Wände des Hofes in Leinwände, auf denen Fresken und Installationen zu sehen sind, und verbindet so Geschichte, Gemeinschaft und Kreativität.\n\nJedes Kunstwerk erzählt eine Geschichte – von Porträts früherer Bewohner bis hin zu symbolischen Werken, die das gemeinsame Erbe dieses Ortes widerspiegeln. In diesem digitalen Raum können Sie die einzelnen Bereiche der Galerie und ihre Geschichte erkunden. Die Galerie lädt alle dazu ein, ihre sich stetig weiterentwickelnde Geschichte zu entdecken.\n\nUm zu helfen, diesen einzigartigen Ort lebendig zu erhalten und weiterwachsen zu lassen, bitten wir Sie, eine Spende in Erwägung zu ziehen, damit auch künftig Kunst entstehen kann, die Vergangenheit und Gegenwart miteinander verbindet."
+  },
+  "history": {
+    "title": "Geschichte",
+    "intro": "Auf dieser Seite finden Sie zwei Bücher, die die Geschichte der Kiemo Galerija erzählen – einschließlich ihrer Projekte, Kunstwerke und der Menschen, der Nachbarn, die dieses Projekt möglich gemacht haben.\n\nBuch 1 – Der Anfang\n\nBuch 2 – Die Hof-Szenografie und die „Zimmer der Geheimnisse“",
+    "galleries": [
+      {
+        "title": "Buch 1 – Der Anfang",
+        "imagePrefix": "2f2a7638ee3ad0f7de567f76ba679b67-",
+        "imageCount": 74
+      },
+      {
+        "title": "Buch 2 – Die Hof-Szenografie und die „Zimmer der Geheimnisse“",
+        "imagePrefix": "kiemo-scenografijos-ir-paslapciu-kambariai-2024-07-13-interneto-svetainei-ii-dalis-",
+        "imageCount": 94
+      }
+    ]
+  },
+  "visiting": {
+    "title": "Öffnungszeiten und Regeln",
+    "body": "Kiemo Galerija ist ein privater Raum!\n\nIn den sechsunddreißig Wohnungen unseres Hofes leben Menschen jeden Alters, die in ihrem Zuhause Ruhe und Stille wünschen!\n\nWir bitten die Besucher, die Privatsphäre und Ruhe der Hofbewohner zu respektieren!\n\nRegeln für den Besuch der Kiemo Galerija\n\nDie Kiemo Galerija ist für Besucher täglich von 9.00 bis 19.00 Uhr geöffnet.\n\nWir bitten die Besucher, keinen Lärm zu machen, leise zu sprechen und Emotionen zurückhaltend zu äußern (laute Kommentare, Lachen, Rufe u. Ä. stören die Ruhe der Nachbarn).\n\nBitte betreten Sie nicht die Treppenhäuser und Wohnungen der Hofbewohner – das ist der private Bereich der Nachbarn!\n\nIm Hof darf kein Müll hinterlassen werden!\n\nDie Nutzung der Räumlichkeiten der Kiemo Galerija für Spiele, Quizze, Orientierungswettbewerbe, Hochzeiten und andere organisierte Gruppenaktivitäten muss mit dem Kurator der Kiemo Galerija, Vytenis Jakas, abgestimmt werden (E-Mail: jakuvy@gmail.com oder yardgallerylt@gmail.com).\n\nWir wünschen Ihnen schöne Eindrücke und gute Laune!"
+  },
+  "gallery": {
+    "title": "Kiemo Galerija: Virtuelle Galerie",
+    "intro": "Willkommen in der virtuellen Galerie der Kiemo Galerija. Hier finden Sie Fotos aller im Hof vorhandenen Kunstwerke sowie einige Aufnahmen des Entstehungsprozesses und der Künstler. Klicken Sie auf die Kunstwerke, um mehr über sie zu erfahren!"
+  },
+  "support": {
+    "title": "Unterstützen Sie die Kiemo Galerija",
+    "body": "Die Kiemo Galerija ist eine Initiative der Gemeinschaft, getragen von Freiwilligen und Spendern. Ihre Unterstützung hilft, die Kunstwerke und den Hof zu pflegen und zu erhalten."
+  },
+  "footer": {
+    "contactEmail": "kiemogalerija@gmail.com",
+    "donate": "Spenden"
+  }
+}

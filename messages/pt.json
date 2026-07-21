@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Início",
+    "history": "História",
+    "gallery": "Galeria Virtual",
+    "visiting": "Horário e Regras de Visita",
+    "book": "Sunkūs Paminklai",
+    "support": "Doar"
+  },
+  "home": {
+    "title": "Kiemo Galerija",
+    "intro": "A Kiemo Galerija (a «Galeria do Pátio») é uma galeria de arte urbana ao ar livre, situada num pátio histórico em Kaunas, na Lituânia. Foi fundada há mais de uma década pelo artista Vytenis Jakas, com o propósito de unir os vizinhos e homenagear, através da arte, a vida dos antigos moradores judeus deste lugar. A galeria transforma as paredes do pátio em telas, onde se exibem murais e instalações que combinam história, comunidade e criatividade.\n\nCada obra conta uma história — de retratos de antigos moradores a peças simbólicas que refletem o património partilhado deste lugar. Neste espaço digital pode explorar as diferentes partes da galeria e a sua história. A galeria convida a todos a descobrir a sua narrativa em constante transformação.\n\nPara ajudar a manter este espaço único vivo e em crescimento, considere fazer uma doação, contribuindo para que se continue a criar arte que une o passado ao presente."
+  },
+  "history": {
+    "title": "História",
+    "intro": "Nesta página encontrará dois livros que contam a história da Kiemo Galerija, incluindo os seus projetos, obras de arte e as pessoas — os vizinhos — que tornaram este projeto possível.\n\nLivro 1 – O Início\n\nLivro 2 – A Cenografia do Pátio e as «Salas dos Segredos»",
+    "galleries": [
+      {
+        "title": "Livro 1 – O Início",
+        "imagePrefix": "2f2a7638ee3ad0f7de567f76ba679b67-",
+        "imageCount": 74
+      },
+      {
+        "title": "Livro 2 – A Cenografia do Pátio e as «Salas dos Segredos»",
+        "imagePrefix": "kiemo-scenografijos-ir-paslapciu-kambariai-2024-07-13-interneto-svetainei-ii-dalis-",
+        "imageCount": 94
+      }
+    ]
+  },
+  "visiting": {
+    "title": "Horário e Regras de Visita",
+    "body": "A «Kiemo Galerija» é um espaço privado!\n\nNos trinta e seis apartamentos do nosso pátio vivem pessoas de todas as idades que desejam paz e sossego nas suas casas!\n\nPedimos aos visitantes que respeitem a privacidade e a tranquilidade dos moradores do pátio!\n\nRegras de visita da «Kiemo Galerija»\n\nA Kiemo Galerija está aberta aos visitantes todos os dias, das 9h00 às 19h00.\n\nPedimos aos visitantes que não façam barulho, que falem baixo e que expressem as suas emoções com moderação (comentários altos, risadas, gritos, etc. perturbam a tranquilidade dos vizinhos).\n\nPedimos que não entrem nas escadarias nem nos apartamentos dos moradores do pátio — esse é um espaço privado dos vizinhos!\n\nÉ proibido deitar lixo no pátio!\n\nA utilização do espaço da Kiemo Galerija para jogos, questionários, corridas de orientação, casamentos e outras atividades de grupo organizadas deve ser previamente combinada com o curador da Kiemo Galerija, Vytenis Jakas (e-mail: jakuvy@gmail.com ou yardgallerylt@gmail.com).\n\nDesejamos-lhe boas impressões e um bom estado de espírito!"
+  },
+  "gallery": {
+    "title": "Kiemo Galerija: Galeria Virtual",
+    "intro": "Bem-vindo à galeria virtual da Kiemo Galerija. Aqui pode encontrar fotografias de todas as obras de arte presentes no pátio, além de algumas imagens do processo criativo e dos artistas. Experimente clicar nas obras de arte para saber mais sobre elas!"
+  },
+  "support": {
+    "title": "Apoie a Kiemo Galerija",
+    "body": "A Kiemo Galerija é uma iniciativa comunitária, apoiada por voluntários e doadores. O seu apoio ajuda a preservar as obras de arte e o espaço do pátio."
+  },
+  "footer": {
+    "contactEmail": "kiemogalerija@gmail.com",
+    "donate": "Doar"
+  }
+}

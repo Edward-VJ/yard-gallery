@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "history": "Histoire",
+    "gallery": "Galerie virtuelle",
+    "visiting": "Horaires et règles de visite",
+    "book": "Sunkūs Paminklai",
+    "support": "Faire un don"
+  },
+  "home": {
+    "title": "Kiemo Galerija",
+    "intro": "« Kiemo Galerija » (la Galerie de la Cour / Yard Gallery) est une galerie d'art urbain en plein air, située dans une cour historique de Kaunas, en Lituanie. Elle a été fondée il y a plus d'une décennie par l'artiste Vytenis Jakas, dans le but de rapprocher les voisins et d'honorer, par l'art, la mémoire des anciens habitants juifs de ce lieu. La galerie transforme les murs de la cour en toiles, où se déploient fresques et installations mêlant histoire, communauté et créativité.\n\nChaque œuvre raconte une histoire — des portraits d'anciens habitants aux créations symboliques reflétant l'héritage commun de ce lieu. Cet espace numérique vous permet d'explorer les différentes parties de la galerie ainsi que son histoire. La galerie invite chacun à découvrir son récit, sans cesse en mouvement.\n\nPour aider à maintenir cet espace unique vivant et en constante évolution, nous vous invitons à envisager un don, afin que continue de naître un art qui relie le passé au présent."
+  },
+  "history": {
+    "title": "Histoire",
+    "intro": "Sur cette page, vous trouverez deux livres qui racontent l'histoire de Kiemo Galerija, ses projets, ses œuvres d'art et les personnes — les voisins — qui ont rendu ce projet possible.\n\nLivre 1 – Les débuts\n\nLivre 2 – La scénographie de la cour et les « Chambres des secrets »",
+    "galleries": [
+      {
+        "title": "Livre 1 – Les débuts",
+        "imagePrefix": "2f2a7638ee3ad0f7de567f76ba679b67-",
+        "imageCount": 74
+      },
+      {
+        "title": "Livre 2 – La scénographie de la cour et les « Chambres des secrets »",
+        "imagePrefix": "kiemo-scenografijos-ir-paslapciu-kambariai-2024-07-13-interneto-svetainei-ii-dalis-",
+        "imageCount": 94
+      }
+    ]
+  },
+  "visiting": {
+    "title": "Horaires et Règles de Visite",
+    "body": "« Kiemo Galerija » est un espace privé !\n\nDans les trente-six appartements de notre cour vivent des personnes de tous âges, qui souhaitent trouver calme et tranquillité chez elles !\n\nNous demandons aux visiteurs de respecter l'intimité et la tranquillité des habitants de la cour !\n\nRègles de visite de « Kiemo Galerija »\n\nKiemo Galerija est ouverte aux visiteurs tous les jours de 9h00 à 19h00.\n\nNous demandons aux visiteurs de ne pas faire de bruit, de parler à voix basse et d'exprimer leurs émotions avec retenue (les commentaires bruyants, les rires, les cris, etc. troublent la tranquillité des voisins).\n\nMerci de ne pas pénétrer dans les cages d'escalier ni dans les appartements des habitants de la cour : il s'agit de l'espace privé des voisins !\n\nIl est interdit de jeter des déchets dans la cour !\n\nToute utilisation de l'espace de Kiemo Galerija pour des jeux, quiz, courses d'orientation, mariages ou autres activités de groupe organisées doit être préalablement convenue avec le conservateur de Kiemo Galerija, Vytenis Jakas (courriel : jakuvy@gmail.com ou yardgallerylt@gmail.com).\n\nNous vous souhaitons une belle visite et une agréable humeur !"
+  },
+  "gallery": {
+    "title": "Kiemo Galerija : Galerie Virtuelle",
+    "intro": "Bienvenue dans la galerie virtuelle de Kiemo Galerija. Vous y trouverez les photographies de toutes les œuvres présentes dans la cour, ainsi que quelques images du processus créatif et des artistes. N'hésitez pas à cliquer sur les œuvres pour en apprendre davantage sur elles !"
+  },
+  "support": {
+    "title": "Soutenez Kiemo Galerija",
+    "body": "Kiemo Galerija est une initiative communautaire soutenue par des bénévoles et des donateurs. Votre soutien contribue à l'entretien des œuvres d'art et de l'espace de la cour."
+  },
+  "footer": {
+    "contactEmail": "kiemogalerija@gmail.com",
+    "donate": "Faire un don"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "首页",
+    "history": "历史",
+    "gallery": "虚拟画廊",
+    "visiting": "参观时间与须知",
+    "book": "Sunkūs Paminklai",
+    "support": "捐赠"
+  },
+  "home": {
+    "title": "Kiemo Galerija",
+    "intro": "“Kiemo Galerija”（立陶宛语，意为“庭院画廊”）是位于立陶宛考纳斯（Kaunas）一座历史庭院内的露天街头艺术画廊。它由艺术家维特尼斯·雅卡斯（Vytenis Jakas）在十多年前创立，旨在借助艺术，将邻里凝聚在一起，同时缅怀这片土地上曾经的犹太居民的生活。这座画廊将庭院的墙面变成了一幅幅画布，展示着壁画与装置艺术，将历史、社区与创造力融为一体。\n\n每一件作品都在讲述一个故事——从曾经居民的肖像，到反映这片土地共同历史与传承的象征性作品。在这个数字空间里，您可以探索画廊的各个部分及其历史。这座画廊欢迎所有人，一同发现它仍在延续、不断展开的故事。\n\n为了帮助这个独特的空间继续焕发生机、不断成长，欢迎您考虑捐赠支持，让连接过去与当下的艺术创作得以延续。"
+  },
+  "history": {
+    "title": "历史",
+    "intro": "在本页面中，您将看到两本讲述Kiemo Galerija历史的书籍，内容涵盖它的各个项目、艺术作品，以及成就这一切的居民与邻里。\n\n第一册——缘起\n\n第二册——庭院场景设计与“秘密房间”",
+    "galleries": [
+      {
+        "title": "第一册——缘起",
+        "imagePrefix": "2f2a7638ee3ad0f7de567f76ba679b67-",
+        "imageCount": 74
+      },
+      {
+        "title": "第二册——庭院场景设计与“秘密房间”",
+        "imagePrefix": "kiemo-scenografijos-ir-paslapciu-kambariai-2024-07-13-interneto-svetainei-ii-dalis-",
+        "imageCount": 94
+      }
+    ]
+  },
+  "visiting": {
+    "title": "参观时间与须知",
+    "body": "“Kiemo Galerija”是一处私人空间！\n\n在我们庭院的三十六户公寓里，居住着不同年龄段的居民，他们都希望自己的家中能保有安宁与宁静！\n\n请各位游客尊重庭院居民的隐私与安宁！\n\n“Kiemo Galerija”参观须知\n\nKiemo Galerija每天上午9点至晚上7点向游客开放。\n\n请游客保持安静，轻声交谈，克制情绪的表达（大声评论、大笑、呼喊等行为都会打扰到邻居们的安宁）。\n\n请勿进入楼道及庭院居民的住宅，那是邻居们的私人空间！\n\n庭院内禁止乱扔垃圾！\n\n如需将Kiemo Galerija的场地用于各类游戏、问答活动、定向越野比赛、婚礼或其他有组织的团体活动，必须事先与Kiemo Galerija的策展人维特尼斯·雅卡斯（Vytenis Jakas）协商（电子邮箱：jakuvy@gmail.com 或 yardgallerylt@gmail.com）。\n\n祝您参观愉快，心情舒畅！"
+  },
+  "gallery": {
+    "title": "Kiemo Galerija：虚拟画廊",
+    "intro": "欢迎来到Kiemo Galerija的虚拟画廊。在这里，您可以看到庭院中所有艺术作品的照片，还有一些记录创作过程与艺术家们的珍贵影像。不妨点击各件作品，深入了解它们背后的故事！"
+  },
+  "support": {
+    "title": "支持 Kiemo Galerija",
+    "body": "Kiemo Galerija是一项社区倡议，由志愿者和捐助者共同支持维系。您的支持，将帮助我们维护这些艺术作品与庭院空间。"
+  },
+  "footer": {
+    "contactEmail": "kiemogalerija@gmail.com",
+    "donate": "捐赠"
+  }
+}
