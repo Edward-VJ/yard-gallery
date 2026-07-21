@@ -16,7 +16,15 @@ const NAV_ITEMS: { key: PageKey; messageKey: string }[] = [
   { key: "visiting", messageKey: "visiting" },
 ];
 
-export async function Header({ locale, page }: { locale: Locale; page: PageKey }) {
+export async function Header({
+  locale,
+  page,
+  artworkSlug,
+}: {
+  locale: Locale;
+  page: PageKey;
+  artworkSlug?: string;
+}) {
   const t = await getTranslations("nav");
   const footer = await getTranslations("footer");
   const resolvedNavItems = NAV_ITEMS.map(({ key, messageKey }) => ({
@@ -26,7 +34,7 @@ export async function Header({ locale, page }: { locale: Locale; page: PageKey }
 
   return (
     <>
-      <LocaleRedirect locale={locale} page={page} />
+      <LocaleRedirect locale={locale} page={page} artworkSlug={artworkSlug} />
       <header className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[var(--color-surface)]/95 backdrop-blur-sm">
         {/*
           Full-bleed, not centered to a max-width column — logo sits at the
@@ -87,10 +95,10 @@ export async function Header({ locale, page }: { locale: Locale; page: PageKey }
 
           <div className="hidden shrink-0 items-center gap-3 xl:flex">
             <ThemeToggle />
-            <LanguageSwitcher locale={locale} page={page} />
+            <LanguageSwitcher locale={locale} page={page} artworkSlug={artworkSlug} />
           </div>
 
-          <MobileNav locale={locale} page={page} navItems={resolvedNavItems} />
+          <MobileNav locale={locale} page={page} artworkSlug={artworkSlug} navItems={resolvedNavItems} />
         </div>
       </header>
     </>

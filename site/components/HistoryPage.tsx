@@ -1,6 +1,6 @@
 import { getMessages, getTranslations } from "next-intl/server";
 import { ArtImage } from "./ArtImage";
-import { EmbeddedGallery } from "./EmbeddedGallery";
+import { BookPreview } from "./BookPreview";
 
 type GalleryMeta = { title: string; imagePrefix: string; imageCount: number };
 
@@ -48,9 +48,11 @@ export async function HistoryPage() {
         </div>
       </section>
 
-      {galleries.map((gallery, i) => (
-        <EmbeddedGallery key={gallery.imagePrefix} title={gallery.title} filenames={galleryFilenames(i, gallery)} />
-      ))}
+      <section className="mx-auto grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2">
+        {galleries.map((gallery, i) => (
+          <BookPreview key={gallery.imagePrefix} title={gallery.title} filenames={galleryFilenames(i, gallery)} />
+        ))}
+      </section>
     </main>
   );
 }

@@ -10,10 +10,12 @@ import { ThemeToggle } from "./ThemeToggle";
 export function MobileNav({
   locale,
   page,
+  artworkSlug,
   navItems,
 }: {
   locale: Locale;
   page: PageKey;
+  artworkSlug?: string;
   navItems: { key: PageKey; label: string }[];
 }) {
   const [open, setOpen] = useState(false);
@@ -49,7 +51,7 @@ export function MobileNav({
           ))}
           <div className="flex items-center gap-3 border-t border-[var(--color-border)] pt-4">
             <ThemeToggle />
-            <LanguageSwitcher locale={locale} page={page} />
+            <LanguageSwitcher locale={locale} page={page} artworkSlug={artworkSlug} />
           </div>
         </div>
       )}

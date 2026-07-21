@@ -10,15 +10,20 @@ import { Footer } from "./Footer";
 export function PageShell({
   locale,
   page,
+  artworkSlug,
   children,
 }: {
   locale: Locale;
   page: PageKey;
+  // Set only on an individual artwork page (YG-6) — lets the language
+  // switcher/auto-redirect send you to the SAME artwork in another locale
+  // instead of just the gallery hub. See lib/routes.ts's equivalentPath.
+  artworkSlug?: string;
   children: React.ReactNode;
 }) {
   return (
     <>
-      <Header locale={locale} page={page} />
+      <Header locale={locale} page={page} artworkSlug={artworkSlug} />
       {children}
       <Footer />
     </>

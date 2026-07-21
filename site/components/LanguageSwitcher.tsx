@@ -1,16 +1,18 @@
 "use client";
 
 import { locales, localeLabels, type Locale } from "@/i18n/locales";
-import { pathFor, type PageKey } from "@/lib/routes";
+import { equivalentPath, type PageKey } from "@/lib/routes";
 
 export const LOCALE_STORAGE_KEY = "kg-locale";
 
 export function LanguageSwitcher({
   locale,
   page,
+  artworkSlug,
 }: {
   locale: Locale;
   page: PageKey;
+  artworkSlug?: string;
 }) {
   function handleChange(next: Locale) {
     try {
@@ -19,7 +21,7 @@ export function LanguageSwitcher({
       // localStorage unavailable (private browsing etc) — switching still works,
       // it just won't be remembered for the next visit.
     }
-    window.location.href = pathFor(page, next);
+    window.location.href = equivalentPath(page, next, artworkSlug);
   }
 
   return (

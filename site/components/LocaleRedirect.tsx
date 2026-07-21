@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { locales, defaultLocale, type Locale } from "@/i18n/locales";
-import { pathFor, type PageKey } from "@/lib/routes";
+import { equivalentPath, type PageKey } from "@/lib/routes";
 import { LOCALE_STORAGE_KEY } from "./LanguageSwitcher";
 
 // Applies YG-4's "default = browser Accept-Language, fallback lt" rule.
@@ -19,9 +19,11 @@ import { LOCALE_STORAGE_KEY } from "./LanguageSwitcher";
 export function LocaleRedirect({
   locale,
   page,
+  artworkSlug,
 }: {
   locale: Locale;
   page: PageKey;
+  artworkSlug?: string;
 }) {
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -33,7 +35,7 @@ export function LocaleRedirect({
     }
 
     if (stored && (locales as readonly string[]).includes(stored) && stored !== locale) {
-      window.location.href = pathFor(page, stored as Locale);
+      window.location.href = equivalentPath(page, stored as Locale, artworkSlug);
       return;
     }
 
@@ -51,10 +53,10 @@ export function LocaleRedirect({
           // Can't persist -> would re-detect every visit, which is fine,
           // just proceed with the one-time redirect below.
         }
-        window.location.href = pathFor(page, match as Locale);
+        window.location.href = equivalentPath(page, match as Locale, artworkSlug);
       }
     }
-  }, [locale, page]);
+  }, [locale, page, artworkSlug]);
 
   return null;
 }
