@@ -6,5 +6,6 @@ out/
 !.env.example
 raw/
 processed/
+assets/
 .DS_Store
 Thumbs.db
