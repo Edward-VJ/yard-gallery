@@ -42,5 +42,10 @@
   "footer": {
     "contactEmail": "kiemogalerija@gmail.com",
     "donate": "후원하기"
+  },
+  "notFound": {
+    "title": "페이지를 찾을 수 없습니다",
+    "body": "이 페이지는 존재하지 않거나 이동되었습니다.",
+    "cta": "홈으로 돌아가기"
   }
 }

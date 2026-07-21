@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { prefixedLocales } from "@/i18n/locales";
+import { typewriter } from "@/lib/fonts";
+import { ThemeInitScript } from "@/components/ThemeInitScript";
 import "../globals.css";
 
 export function generateStaticParams() {
@@ -15,6 +17,8 @@ export const metadata: Metadata = {
 // Root layout for every locale EXCEPT Lithuanian, served under /xx/...
 // Lithuanian is served unprefixed by app/(lt) instead — see
 // plan/qr-locked-urls.md (yard-gallery-plan repo) for why.
+// Header/Footer are composed per-page via <PageShell>, not here — see
+// components/PageShell.tsx for why.
 export default async function LocaleRootLayout({
   children,
   params,
@@ -29,7 +33,10 @@ export default async function LocaleRootLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={typewriter.variable} suppressHydrationWarning>
+      <head>
+        <ThemeInitScript />
+      </head>
       <body>{children}</body>
     </html>
   );

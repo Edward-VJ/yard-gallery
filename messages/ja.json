@@ -42,5 +42,10 @@
   "footer": {
     "contactEmail": "kiemogalerija@gmail.com",
     "donate": "寄付する"
+  },
+  "notFound": {
+    "title": "ページが見つかりません",
+    "body": "このページは存在しないか、移動されました。",
+    "cta": "ホームに戻る"
   }
 }

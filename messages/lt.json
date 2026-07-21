@@ -42,5 +42,10 @@
   "footer": {
     "contactEmail": "kiemogalerija@gmail.com",
     "donate": "Paaukoti"
+  },
+  "notFound": {
+    "title": "Puslapis nerastas",
+    "body": "Šio puslapio nėra arba jis buvo perkeltas.",
+    "cta": "Grįžti į pradžią"
   }
 }
