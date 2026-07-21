@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Home",
+    "history": "History",
+    "gallery": "Virtual Gallery",
+    "visiting": "Visiting Hours & Rules",
+    "book": "Sunkūs Paminklai",
+    "support": "Donate"
+  },
+  "home": {
+    "title": "Kiemo Galerija",
+    "intro": "Kiemo Galerija (Yard Gallery) is an open-air street art gallery in a historic courtyard in Kaunas, Lithuania. It was founded more than a decade ago by artist Vytenis Jakas, who set out to bring neighbors together and honor the lives of the area's former Jewish residents through art. The gallery turns the courtyard's walls into canvases for murals and installations, blending history, community, and creativity.\n\nEvery artwork tells a story — from portraits of former residents to symbolic pieces reflecting the shared heritage of this place. In this digital space you can explore the gallery and its history. Everyone is invited to discover its unfolding story.\n\nTo help keep this unique space alive and growing, please consider donating, so that art connecting the past with the present can keep being made."
+  },
+  "history": {
+    "title": "History",
+    "intro": "On this page you'll find two books that tell the story of Kiemo Galerija — its projects, its artworks, and the neighbors who made this project possible.\n\nBook 1 – The Beginning\n\nBook 2 – The Courtyard's Set Design and \"Rooms of Secrets\"",
+    "galleries": [
+      {
+        "title": "Book 1 – The Beginning",
+        "imagePrefix": "2f2a7638ee3ad0f7de567f76ba679b67-",
+        "imageCount": 74
+      },
+      {
+        "title": "Book 2 – The Courtyard's Set Design and \"Rooms of Secrets\"",
+        "imagePrefix": "kiemo-scenografijos-ir-paslapciu-kambariai-2024-07-13-interneto-svetainei-ii-dalis-",
+        "imageCount": 94
+      }
+    ]
+  },
+  "visiting": {
+    "title": "Visiting Hours & Rules",
+    "body": "Kiemo Galerija is a private space!\n\nThirty-six apartments around our courtyard are home to people of all ages who value peace and quiet at home!\n\nWe ask visitors to respect the privacy and peace of the courtyard's residents!\n\nRules for visiting Kiemo Galerija\n\nKiemo Galerija is open to visitors every day from 9:00 to 19:00.\n\nWe ask visitors not to make noise — please speak quietly and keep emotions restrained (loud comments, laughter, shouting, etc. disturb the neighbors' peace).\n\nPlease do not enter the stairwells or residents' apartments — this is the neighbors' private space!\n\nNo littering in the courtyard!\n\nUsing the courtyard space for games, quizzes, orienteering competitions, weddings, or other organized group activities must be arranged in advance with Kiemo Galerija's curator, Vytenis Jakas (email: jakuvy@gmail.com or yardgallerylt@gmail.com).\n\nWe wish you a beautiful visit and a good mood!"
+  },
+  "gallery": {
+    "title": "Kiemo Galerija: Virtual Gallery",
+    "intro": "Welcome to Kiemo Galerija's virtual gallery. Here you can find photos of all the artworks in the courtyard, as well as a few photos of the creative process and the artists. Try clicking on the artworks to learn more about them!"
+  },
+  "support": {
+    "title": "Support Kiemo Galerija",
+    "body": "Kiemo Galerija is a community initiative sustained by volunteers and donors. Your support helps maintain the artworks and the courtyard space."
+  },
+  "footer": {
+    "contactEmail": "kiemogalerija@gmail.com",
+    "donate": "Donate"
+  }
+}
