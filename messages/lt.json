@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Pagrindinis",
+    "history": "Istorija",
+    "gallery": "Virtuali galerija",
+    "visiting": "Lankymo laikas ir taisyklės",
+    "book": "Sunkūs Paminklai",
+    "support": "Paaukoti"
+  },
+  "home": {
+    "title": "Kiemo Galerija",
+    "intro": "“Kiemo galerija” yra lauko gatvės meno galerija, esanti istoriniame kieme Kaune, Lietuvoje. Ją prieš daugiau nei dešimtmetį įkūrė menininkas Vytenis Jakas, siekdamas sujungti kaimynus ir pagerbti buvusių žydų gyventojų gyvenimus šioje vietoje per meną. Galerija veikia paversdama kiemo sienas drobėmis, kuriose eksponuojami freskos ir instaliacijos, derindama istoriją, bendruomenę ir kūrybiškumą.\n\nKiekvienas meno kūrinys pasakoja istoriją — nuo buvusių gyventojų portretų iki simbolinių kūrinių, atspindinčių bendrą šio vietos paveldą. Šioje skaitmeninėje erdvėje galite tyrinėti galerijos dalis ir jos istoriją. Galerija kviečia visus atrasti jos besikeičiančią pasakojimą.\n\nNorėdami padėti išlaikyti šią unikalią erdvę gyvą ir augančią, prašome apsvarstyti galimybę paaukoti, kad būtų toliau kuriamas menas, jungiantis praeitį su dabartimi."
+  },
+  "history": {
+    "title": "Istorija",
+    "intro": "Šiame puslapyje rasite dvi knygas, kurios pasakoja Kiemo galerijos istoriją, įskaitant jos projektus, meno kūrinius ir žmones – kaimynus, kurie padarė šį projektą įmanomu.\n\nKnyga 1 – Pradžia\n\nKnyga 2 – Kiemo scenografija ir „Paslapčių kambariai“",
+    "galleries": [
+      {
+        "title": "Knyga 1 – Pradžia",
+        "imagePrefix": "2f2a7638ee3ad0f7de567f76ba679b67-",
+        "imageCount": 74
+      },
+      {
+        "title": "Knyga 2 – Kiemo scenografija ir „Paslapčių kambariai“",
+        "imagePrefix": "kiemo-scenografijos-ir-paslapciu-kambariai-2024-07-13-interneto-svetainei-ii-dalis-",
+        "imageCount": 94
+      }
+    ]
+  },
+  "visiting": {
+    "title": "Lankymo Laikas ir Taisyklės",
+    "body": ",,Kiemo galerija“ – tai privati erdvė!\n\nTrisdešimt šešiuose mūsų kiemo butuose gyvena įvairaus amžiaus žmonės, kurie nori ramybės ir tylos savo namuose!\n\nPrašome lankytojus gerbti Kiemo gyventojų privatumą ir ramybę!\n\n,,Kiemo galerijos” lankymo: Taisyklės\n\nKiemo galerija atvira lankytojams kiekvieną dieną nuo 9.00 iki 19.00 val.\n\nLankytojus prašome netriukšmauti, kalbėti tyliai, santūriai reikšti emocijas (garsūs komentarai, juokas, šūksniai ir kt. trikdo kaimynų ramybę).\n\nPrašome neiti į laiptines ir Kiemo gyventojų butus, tai – kaimynų privati erdvė!\n\nKieme negalima šiukšlinti!\n\nKiemo galerijos erdvės naudojimas įvairiuose žaidimuose, viktorinose, orientacinėse varžybose, vestuvėse ir kitose organizuotose grupių veiklose privalo būti suderintas su Kiemo galerijos kuratoriumi Vyteniu Jaku (el. p. jakuvy@gmail.com arba yardgallerylt@gmail.com).\n\nLinkime gražių įspūdžių ir geros nuotaikos!"
+  },
+  "gallery": {
+    "title": "Kiemo Galerija: Virtuali Galerija",
+    "intro": "Sveiki atvykę į virtualią Kiemo galerijos galeriją. Čia galite rasti visų kieme esančių meno kūrinių nuotraukas, taip pat keletą kūrybinio proceso ir menininkų nuotraukų. Pabandykite spustelėti meno kūrinius, kad sužinotumėte daugiau apie juos!"
+  },
+  "support": {
+    "title": "Paremkite Kiemo Galeriją",
+    "body": "Kiemo galerija yra bendruomenės iniciatyva, kurią palaiko savanoriai ir aukotojai. Jūsų parama padeda prižiūrėti meno kūrinius ir kiemo erdvę."
+  },
+  "footer": {
+    "contactEmail": "kiemogalerija@gmail.com",
+    "donate": "Paaukoti"
+  }
+}
