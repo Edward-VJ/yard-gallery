@@ -64,6 +64,30 @@ export function GalleryClient({
     }
   }, [initialIndex]);
 
+  // Subtle scroll-reveal (YG-6 step 2). Toggles a class directly via the
+  // DOM (not React state) since it's a one-way, per-element visual effect
+  // with no other state depending on it — avoids 32 re-renders as the user
+  // scrolls. prefers-reduced-motion is handled entirely in CSS (see
+  // .gallery-item in globals.css), not branched here, so it applies even
+  // if this effect never runs (e.g. hydration hasn't finished yet).
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("gallery-item-revealed");
+            observer.unobserve(entry.target);
+          }
+        }
+      },
+      { threshold: 0.15 }
+    );
+    for (const el of itemRefs.current) {
+      if (el) observer.observe(el);
+    }
+    return () => observer.disconnect();
+  }, [artworks]);
+
   return (
     <>
       <div className="mx-auto max-w-4xl px-6 py-14 lg:px-12">
@@ -73,7 +97,7 @@ export function GalleryClient({
             ref={(el) => {
               itemRefs.current[i] = el;
             }}
-            className="mb-20 last:mb-0"
+            className="gallery-item mb-20 last:mb-0"
           >
             <button type="button" onClick={() => openArtwork(i)} className="group block w-full text-left">
               <div className="relative aspect-[4/3] overflow-hidden">

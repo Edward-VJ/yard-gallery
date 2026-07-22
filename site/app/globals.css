@@ -166,6 +166,27 @@ body {
   }
 }
 
+/* Virtual gallery (YG-6) scroll-reveal — GalleryClient toggles
+   .gallery-item-revealed via IntersectionObserver as each artwork enters
+   the viewport. prefers-reduced-motion is handled here, not in JS, so it
+   applies even before/without the observer running. */
+.gallery-item {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.gallery-item-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .gallery-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* ThemeToggle: default to sun (light) until data-theme is set, matching
    the light-first default in :root above. */
 .theme-icon-moon {
